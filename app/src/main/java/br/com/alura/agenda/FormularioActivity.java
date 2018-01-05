@@ -70,13 +70,7 @@ public class FormularioActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == CAMERA_REQUEST_CODE && resultCode == Activity.RESULT_OK){
-            ImageView imagemAluno = (ImageView) findViewById(R.id.formulario_foto);
-            //É criado um bitmap da imagem capturada
-            Bitmap bitmap = BitmapFactory.decodeFile(photoSrc);
-            //O bitmap é reduzido para caber bem na ImageView. O ideal é ficar abaixo de 512x512
-            Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, 300, 300, true);
-            imagemAluno.setImageBitmap(scaledBitmap);
-            imagemAluno.setScaleType(ImageView.ScaleType.FIT_XY);
+            helper.carregaImagem(photoSrc);
         }
     }
 
