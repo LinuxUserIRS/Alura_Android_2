@@ -63,7 +63,7 @@ public class FormularioActivity extends AppCompatActivity {
 
     }
 
-    //Esse meétodo é sempre chamado após retornar de uma acitivty.
+    //Esse método é sempre chamado após retornar de uma acitivty.
     //Por isso devemos difenciar estre os códigos dos métodos que iniciaram a activity.
     //Poderíamos ter um método que chama o microfone e depois volta para cá, por exemplo.
     //Então temos que diferenciar se estamos usando a câmera ou o microfone e tomar as ações adequadas nesse exemplo.
