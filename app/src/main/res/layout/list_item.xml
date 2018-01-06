@@ -31,7 +31,6 @@
             android:text="Telefone"
             android:id="@+id/list_item_profilePhone"
             android:textSize="20sp"
-            android:textStyle="bold"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"/>
 
