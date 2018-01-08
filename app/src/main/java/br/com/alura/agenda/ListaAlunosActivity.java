@@ -56,6 +56,12 @@ public class ListaAlunosActivity extends AppCompatActivity {
         });
 
         registerForContextMenu(listaAlunos);
+
+        //Checando se a permissão de ler SMS já foi dada e pedindo a permissão caso contrário
+        if(ActivityCompat.checkSelfPermission(ListaAlunosActivity.this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(ListaAlunosActivity.this, new String[] {Manifest.permission.RECEIVE_SMS}, 2);
+
+        }
     }
 
     @Override
