@@ -90,4 +90,15 @@ public class AlunoDAO extends SQLiteOpenHelper {
         String[] params = {aluno.getId().toString()};
         db.update("Alunos", dados, "id = ?", params);
     }
+
+    public boolean isAluno(String fone){
+        SQLiteDatabase db = getReadableDatabase();
+        //Por algum motivo que queria entender. Não dá pra colar a string direto no rawQuery.
+        //É preciso criar uma variável string e passar como parâmetro.
+        String sql = "SELECT * FROM ALunos WHERE telefone = ?";
+        Cursor c =db.rawQuery(sql, new String[]{fone});
+        int result = c.getCount();
+        c.close();
+        return result > 0;
+    }
 }
