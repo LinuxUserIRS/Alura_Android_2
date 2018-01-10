@@ -1,0 +1,19 @@
+<alunos>
+    <aluno>
+        <id></id>
+        <nome>Daniel</nome>
+        <endereco>Rua Vergueiro</endereco>
+        <telefone>11112222</telefone>
+        <site>www.alura.com.br</site>
+        <nota>4.5</nota>
+    </aluno>
+
+    <aluno>
+        <id></id>
+        <nome>Marcos</nome>
+        <endereco>Rua Emiliano Braga</endereco>
+        <telefone>85996971669</telefone>
+        <site>www.google.com.br</site>
+        <nota>9.8</nota>
+    </aluno>
+</alunos>

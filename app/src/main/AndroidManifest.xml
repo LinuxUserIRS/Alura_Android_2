@@ -3,6 +3,9 @@
     package="br.com.alura.agenda">
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    //Permissão de internet é uma permissão considerada "segura"
+    //Ou seja, quando o usuário dá a permissão de instalação do app, não é mais necessário pedir novamente
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
