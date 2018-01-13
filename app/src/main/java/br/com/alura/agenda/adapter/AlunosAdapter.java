@@ -10,6 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import br.com.alura.agenda.ListaAlunosActivity;
@@ -64,6 +66,17 @@ public class AlunosAdapter extends BaseAdapter {
         //Fazendo o mesmo aqui com o telefone
         TextView campoTelefone = (TextView) view.findViewById(R.id.list_item_profilePhone);
         campoTelefone.setText(aluno.getTelefone());
+
+        //Fazendo o mesmo com endereço
+        TextView campoEndereco = (TextView) view.findViewById(R.id.list_item_endereco);
+        //Fazendo o mesmo com o site
+        TextView campoSite = (TextView) view.findViewById(R.id.list_item_site);
+
+        //Teste para só setar o texto caso a tela esteja em modo paisagem
+        if(campoEndereco != null && campoSite!= null){
+            campoEndereco.setText(aluno.getEndereco());
+            campoSite.setText(aluno.getSite());
+        }
         //Fazendo o mesmo aqui com a imagem
         ImageView campoImagem = (ImageView) view.findViewById(R.id.list_item_profilePicture);
         String photoSrc = aluno.getFoto();
