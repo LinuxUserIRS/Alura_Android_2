@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.alura.agenda">
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     //Permissão de internet é uma permissão considerada "segura"
-    //Ou seja, quando o usuário dá a permissão de instalação do app, não é mais necessário pedir novamente
-    <uses-permission android:name="android.permission.INTERNET"/>
+    //Ou seja, quando o usuário dá a permissão de instalação do app, não é mais necessário pedir
+    novamente
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,15 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormularioActivity">
+        <activity android:name=".FormularioActivity"></activity>
 
-        </activity>
         <receiver android:name=".receiver.SMSReceiver">
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".ProvasActivity"></activity>
     </application>
 
 </manifest>
