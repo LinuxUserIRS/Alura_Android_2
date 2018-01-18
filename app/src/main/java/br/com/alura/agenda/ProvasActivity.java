@@ -1,5 +1,6 @@
 package br.com.alura.agenda;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,9 @@ public class ProvasActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Prova prova = (Prova) adapterView.getItemAtPosition(i);
-                Toast.makeText(ProvasActivity.this, prova.getMateria(),Toast.LENGTH_SHORT).show();
+                Intent vaiParaDetalhes = new Intent(ProvasActivity.this, DetalhesProvaActivity.class);
+                vaiParaDetalhes.putExtra("prova", prova);
+                startActivity(vaiParaDetalhes);
             }
         });
     }
