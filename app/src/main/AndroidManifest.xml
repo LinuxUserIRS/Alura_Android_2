@@ -32,6 +32,7 @@
 
         <activity android:name=".ProvasActivity" />
         <activity android:name=".DetalhesProvaActivity" />
+        <activity android:name=".ProvasHorizontalActivity"></activity>
     </application>
 
 </manifest>
