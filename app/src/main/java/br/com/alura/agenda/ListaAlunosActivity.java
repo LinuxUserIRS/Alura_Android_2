@@ -89,6 +89,10 @@ public class ListaAlunosActivity extends AppCompatActivity {
             case R.id.menu_mapa:
                 Intent goToMap = new Intent(this, MapaActivity.class);
                 startActivity(goToMap);
+                //Verificando se há permissão para obter a localização do GPS
+                if((ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED) && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 2);
+                }
                 break;
         }
 
