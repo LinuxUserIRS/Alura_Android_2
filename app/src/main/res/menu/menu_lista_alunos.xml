@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<item
+    <item
     android:id="@+id/menu_enviar_notas"
     android:title="@string/enviar_notas"
     android:icon="@drawable/ic_enviar"
@@ -11,4 +11,10 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:title="@string/baixar_provas"
         android:icon="@drawable/ic_receber"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_mapa"
+        android:title="Vá para o mapa"
+        android:icon="@drawable/ic_mapa"
+        app:showAsAction="always"></item>
 </menu>
