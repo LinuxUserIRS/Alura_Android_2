@@ -1,10 +1,12 @@
 package br.com.alura.agenda;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +24,7 @@ import br.com.alura.agenda.modelo.Prova;
  * Created by italo on 19/01/18.
  */
 
-public class ListaProvasFragment extends Fragment {
+public class ListaProvasFragment extends android.support.v4.app.Fragment{
 
     @Nullable
     @Override
@@ -47,9 +49,9 @@ public class ListaProvasFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Prova prova = (Prova) adapterView.getItemAtPosition(i);
-                Intent vaiParaDetalhes = new Intent(getContext(), DetalhesProvaActivity.class);
-                vaiParaDetalhes.putExtra("prova", prova);
-                startActivity(vaiParaDetalhes);
+
+                ProvasActivity provasActivity = (ProvasActivity) getActivity();
+                provasActivity.selecionaProva(prova);
             }
         });
         return view;

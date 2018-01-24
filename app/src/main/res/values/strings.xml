@@ -6,4 +6,7 @@
     <string name="campo_site">Site</string>
     <string name="baixar_provas">Baixar Provas</string>
     <string name="enviar_notas">Enviar Notas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
